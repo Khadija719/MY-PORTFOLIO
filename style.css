@@ -102,6 +102,18 @@ section {
 
 .home-img img{
     width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .home-content h3{
@@ -405,4 +417,345 @@ span {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 
+
+
+}
+
+
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .services {
+        padding-bottom: 7rem;
+    }
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+    .contact {
+        min-height: auto;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg_color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+
+    
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+
+    }
+
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+    .portfolio-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+:root {
+    --main-color: #0ef; /* Primary color */
+    --second-bg-color: #202020; /* Secondary background color */
+    --bg_color: #1f242d; /* Background color for both boxes */
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #fff;
+}
+
+/* Section styling */
+.about-me {
+    padding: 2rem;
+    background-color: var(--second-bg-color); /* Background color for About Me section */
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Optional for depth */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--main-color);
+    display: inline-block;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+h3 span {
+    color: var(--main-color);
+}
+
+p {
+    font-size: 1.2rem; /* Increased text size globally */
+    line-height: 1.8; /* Adjusted line height for better readability */
+}
+
+/* Layout: Education and Details */
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; /* Make it responsive */
+}
+
+/* Education */
+.education {
+    flex: 1;
+    max-width: 30%; /* Left side width */
+    background: var(--bg_color); /* Updated to use --bg_color */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Optional for depth */
+}
+
+.education ul {
+    list-style: none;
+}
+
+.education li {
+    margin-bottom: 1.5rem;
+}
+
+.education h4 {
+    font-size: 1.4rem; /* Increased text size */
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Details */
+.details {
+    flex: 2;
+    max-width: 65%; /* Right side width */
+    background: var(--bg_color); /* Same background color as Education box */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Optional for depth */
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.info-item {
+    text-align: left;
+}
+
+.info-item p {
+    font-size: 1.2rem; /* Increased text size */
+    margin-bottom: 0.5rem;
+}
+
+/* Skills section */
+.skills {
+    margin-bottom: 2rem;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.skill span {
+    width: 20%;
+    font-size: 1.2rem; /* Increased text size */
+}
+
+.skill-bar {
+    width: 75%;
+    background: #333;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    background: var(--main-color);
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    background: var(--main-color);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    color: #fff;
+    font-size: 1.2rem; /* Increased text size */
+    border-radius: 25px;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(0, 238, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education, .details {
+        max-width: 100%;
+    }
+}
+
+
+.education {
+    flex: 1;
+    max-width: 30%; /* Left side width */
+    background: var(--bg_color); /* Background color */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Optional for depth */
+}
+
+.education ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.education li {
+    margin-bottom: 1.5rem;
+}
+
+.education h4 {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .education {
+        max-width: 100%; /* Make it full width on smaller screens */
+        padding: 1rem;
+    }
+
+    .education h4 {
+        font-size: 1.2rem;
+    }
+
+    .education ul {
+        margin: 0.5rem 0;
+    }
+
+    .education li {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 617px ) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 450px ) {
+    html {
+        font-size: 50%;
+    }
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+@media (max-width: 365px ) {
+    .home-img img {
+        width: 90vw;
+
+    }
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
